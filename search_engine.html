@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Поисковая система факультета компьютерных технологий и прикладной математики</title>
+    <link rel="stylesheet" href="css/searchEngineStyle.css" type="text/css">
+</head>
+<script src="scripts/showSuggestAsync.js"></script>
+<body>
+
+    <span class="main-span">
+        <div class="center page" style="top:20px; background:none;">
+            <br><br>
+                <h1>Кубанский государственный университет</h1>
+                <h2 style="margin-bottom:0;">Информационно-поисковая система</h2>
+                <img src="img/kubsu_magnifier.png" style="margin-top:5px; margin-bottom:0px;" alt="" width="200">
+                <form method="get" class="form-flex" action="cgi-bin/search_engine.py">
+                    <input type="text" name="query" id="query-field" style="margin-top:10px;" autocomplete="off" size="70px" oninput="showSuggestAsync();" onclick="showSuggestAsync();" autofocus><input type="submit" name="submit" style="margin-top:10px;" value=" " id="submit">
+                </form>
+
+            <div id="complete-list" style="text-align:left; left:17px; top:433px;"></div>
+            <br>
+
+            <div style=" width:43%; margin: auto; margin-top:5px;">
+                <fieldset class="fieldset-auto-width" style="background: rgba(255,255,255, 0.3); width:100%; ">
+                    <div class="faset-cap">Тип поиска</div>
+                    <div class="fieldset-content">
+                        <li class="box-group">
+                            <input type="radio" name="search-type" value="normal" id="normal" class="bigbox" checked="checked" />
+                            <label for="normal" class="label">Обычный</label>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="radio" name="search-type" value="concept" id="concept" class="bigbox" />
+                            <label for="concept" class="label">Концептуальный</label>
+                        </li>
+                    </div>
+                </fieldset>
+            </div>
+
+            <!-- ТЕПЕРЬ ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ -->
+            <div class="faq green">
+                <ul>
+                    <li><a href="https://kubsu.ru/abiturient#region-postscript-fourth" target="_blank">Путеводитель абитуриента</a></li>
+                    <li><a href="https://kubsu.ru/ru/education/programs" target="_blank">Образовательные программы</a></li>
+                    <li><a href="https://www.kubsu.ru/sites/default/files/insert/page/prikaz_o_stoimosti_obucheniya_2020-2021_uch._god_skan.pdf" target="_blank">Стоимость обучения</a></li>
+                    <li><a href="https://kubsu.ru/news" target="_blank">Новости</a></li>
+                    <li><a href="https://www.kubsu.ru/ru/abiturient/contacts" target="_blank">Приемная комиссия</a></li>
+                    <li><a href="https://kubsu.ru/ru/contacts" target="_blank">Контактная информация</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="facets" style="top:20px;">
+            <div>
+                <fieldset class="fieldset-auto-width">
+                    <div class="faset-cap">Где искать</div>
+                    <div class="fieldset-content">
+                        <li class="box-group"><input type="radio" name="faset" value="all" id="all" class="bigbox" onclick="checkRadio(0);" checked="checked" /><label for="all" class="label">Везде</label></li>
+                        <li class="box-group"><input type="radio" name="faset" value="category" id="category" class="bigbox" onclick="checkRadio(1);" /><label for="category" class="label">По категориям</label></li>
+                    </div>
+                </fieldset>
+            </div><br>
+            <div>
+                <fieldset class="fieldset-auto-width">
+                    <div class="faset-cap">Категории</div>
+                    <div class="fieldset-content">
+                        <li class="box-group"><input type="checkbox" name="news" id="news" class="bigbox" disabled /><label for="news" class="label">Новости</label></li>
+                        <li class="box-group"><input type="checkbox" name="abitur" id="abitur" class="bigbox" disabled /><label for="abitur" class="label">Абитуриенту</label></li>
+                        <li class="box-group"><input type="checkbox" name="science" id="science" class="bigbox" disabled /><label for="science" class="label">Наука</label></li>
+                        <li class="box-group"><input type="checkbox" name="people" id="people" class="bigbox" disabled /><label for="people" class="label">Люди</label></li>
+                        <li class="box-group"><input type="checkbox" name="docs" id="docs" class="bigbox" disabled /><label for="docs" class="label">Документы</label></li>
+                    </div>
+                </fieldset>
+            </div><br>
+            <div>
+                <fieldset class="fieldset-auto-width">
+                    <div class="faset-cap">Факультеты</div>
+                    <div class="fieldset-content">
+                        <li class="box-group"><input type="checkbox" name="geo" id="geo" class="bigbox" disabled /><label for="geo" class="label">Институт географии, геологии, туризма и сервиса</label></li>
+                        <li class="box-group"><input type="checkbox" name="bio" id="bio" class="bigbox" disabled /><label for="bio" class="label">Биологический факультет</label></li>
+                        <li class="box-group"><input type="checkbox" name="fad" id="fad" class="bigbox" disabled /><label for="fad" class="label">Факультет архитектуры и дизайна</label></li>
+                        <li class="box-group"><input type="checkbox" name="jour" id="jour" class="bigbox" disabled /><label for="jour" class="label">Факультет журналистики</label></li>
+                        <li class="box-group"><input type="checkbox" name="fismo" id="fismo" class="bigbox" disabled /><label for="fismo" class="label">Факультет истории, социологии и международных отношений</label></li>
+                        <li class="box-group"><input type="checkbox" name="fktipm" id="fktipm" class="bigbox" disabled /><label for="fktipm" class="label">Факультет компьютерных технологий и прикладной математики</label></li>
+                        <li class="box-group"><input type="checkbox" name="fmikn" id="fmikn" class="bigbox" disabled /><label for="fmikn" class="label">Факультет математики и компьютерных наук</label></li>
+                        <li class="box-group"><input type="checkbox" name="fppk" id="fppk" class="bigbox" disabled /><label for="fppk" class="label">Факультет педагогики, психологии и коммуникативистики</label></li>
+                        <li class="box-group"><input type="checkbox" name="rgf" id="rgf" class="bigbox" disabled /><label for="rgf" class="label">Факультет романо-германской филологии</label></li>
+                        <li class="box-group"><input type="checkbox" name="fup" id="fup" class="bigbox" disabled /><label for="fup" class="label">Факультет управления и психологии</label></li>
+                        <li class="box-group"><input type="checkbox" name="ftf" id="ftf" class="bigbox" disabled /><label for="ftf" class="label">Физико-технический факультет</label></li>
+                        <li class="box-group"><input type="checkbox" name="phil" id="phil" class="bigbox" disabled /><label for="phil" class="label">Филологический факультет</label></li>
+                        <li class="box-group"><input type="checkbox" name="fhivt" id="fhivt" class="bigbox" disabled /><label for="fhivt" class="label">Факультет химии и высоких технологий</label></li>
+                        <li class="box-group"><input type="checkbox" name="hgf" id="hgf" class="bigbox" disabled /><label for="hgf" class="label">Художественно-графический факультет</label></li>
+                        <li class="box-group"><input type="checkbox" name="econ" id="econ" class="bigbox" disabled /><label for="econ" class="label">Экономический факультет</label></li>
+                        <li class="box-group"><input type="checkbox" name="law" id="law" class="bigbox" disabled /><label for="law" class="label">Юридический факультет</label></li>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </span>
+</body>
+</html>

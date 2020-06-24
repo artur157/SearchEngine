@@ -1,0 +1,275 @@
+@import url(https://fonts.googleapis.com/css?family=Cuprum:400,400i&subset=latin,cyrillic);
+
+body{
+    /*background-color: #cce0bb;*/
+    background: #fff url(../img/yellow-fabric.jpg); /*repeat-x top left*/
+}
+
+h1, h2{
+    color: #B22222/*#8B4513*//*#6c904b*/;
+    font-family: "Book Antiqua"/*"Monotype Corsiva"*/;
+    /*font-family: "Cuprum", sans-serif;*/
+    /*font-variant: small-caps;*/
+    letter-spacing: 2px;
+    word-spacing: 7px;
+}
+
+form.form-flex {
+    display: flex;
+}
+
+input[type=submit] {
+    margin-top: 60px;
+    padding: 10px 20px;
+    background: #DEB887/*#7ca05b*/;
+
+    background-image: url(../img/magnifier-beautiful-brown.png);
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    background-position: center;
+    width: 90px;
+    height: 49px;
+
+    color: #dde08b;
+    font-size: 20pt; /* Размер шрифта в пунктах */
+    /*border-radius: 50px;*/
+
+    border: 1px solid #CEA877;
+    border-radius: 0 20px 20px 0;
+    border-left: 0;
+}
+
+input[type=submit]:active, input[type=submit]:focus, input[type=text]:active, input[type=text]:focus {
+    outline: none;
+}
+
+input[type=text] {
+   margin-top: 60px;
+   size: 150px;
+   font-size: 16pt;
+
+   height: 45px;
+   width: 660px;
+   border: 1px solid #CEA877;
+   border-radius: 20px 0 0 20px;
+   border-right: 0;
+   padding-left: 15px;
+}
+
+input[type=submit]:hover {
+   cursor: pointer;
+}
+
+.stroka_tolko {
+    /*position: relative;*/
+    padding-left: 40px;
+    /*padding-top: 5px;*/
+}
+
+.page{
+    background: rgba(255,255,255, 0.3);
+    position: absolute;
+    left: 120px;
+    top: 160px;
+    /*margin-right: 150px;*/
+    width: 775px;
+    font-family: "Arial", sans-serif;
+    /*color: #5a8039;
+    font-size: 20pt;*/
+    /*line-height: 35px;*/
+    /*padding: 10px;*/
+    /*background-color: #fff;*/
+    padding-right: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.center {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover{
+    color: red;
+}
+
+.green a {
+    color: green;
+}
+
+.green a:hover {
+    color: red;
+}
+
+.hlt1 {
+    font-weight: bold;
+    font-style: normal;
+}
+
+#complete-list {
+    z-index: 10;
+    position: absolute;
+    left: 172px;
+    top: 102px;
+    /*size: 70px;*/
+    font-family: "Arial", sans-serif;
+}
+
+.complete-li {
+    list-style-type: none;
+    background: white;
+    width: 650px;
+    font-size: 14pt;
+    line-height: 28pt;
+    padding-left: 10px;
+}
+
+.complete-li:hover {
+    background: #FFF4BF/*#f7fae5*/;
+    cursor: pointer;
+}
+
+li[class="separated"]{
+    border-top:1px solid grey;
+}
+li[class="separated"]:first-child {border:0;}
+
+li::-moz-list-number {
+
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul.inline > li {
+    display: inline-block; /* Отображать как строчный элемент */
+    border:1px solid #DDD;
+    width: 45%;
+    height: 70px;
+    margin: 5px;
+    margin-left: 0;
+    margin-right: 10px;
+    padding: 10px;
+    padding-top: 20px;
+
+    background: linear-gradient(90deg,
+		rgba(255,255,255,0.1) 0%,
+		rgba(255,255,255, 0.3) 25%,
+		rgba(255,255,255, 0.5) 75%,
+		rgba(255,255,255, 0.1) 100%);
+    box-shadow: 0 0 25px rgba(0,0,0, 0.1), inset 0 0 1px rgba(255,255,255, 0.6);
+    border-radius: 20px;
+}
+
+p.clip {
+    white-space: nowrap; /* Запрещаем перенос строк */
+    overflow: hidden; /* Обрезаем все, что не помещается в область */
+    text-overflow: ellipsis; /* Добавляем многоточие */
+
+    margin: 0;
+}
+
+.stroka-sim-doc {
+    font-variant: small-caps;
+    color: #888;
+    /*font-style: italic;*/
+    letter-spacing: 3px;
+    word-spacing: 5px;
+    margin-right: 40px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.page-num {
+    padding: 7px 14px;
+}
+
+.page-num:hover {
+    background-color: #CCC;
+    border-radius: 20px;
+}
+
+a > span.page-num:hover {
+    color: blue;
+}
+
+.page-num-chosen {
+    background-color: #DEB887;
+    padding: 7px 14px;
+    border-radius: 20px;
+}
+
+.facets {
+    position: absolute;
+    left: 950px;
+    top: 160px;
+
+    background: rgba(255,255,255, 0.3);
+    width: 550px;
+    font-family: "Arial", sans-serif;
+
+    padding: 20px 30px;
+}
+
+input[type=checkbox]:{
+    /*padding-bottom: 10px;*/
+}
+
+.fieldset-auto-width {
+    display: inline-block;
+    line-height: 20pt;
+    border: 3px solid /*#DEB887*/#EEC8A7;
+    width: 540px;
+    padding: 0;
+}
+
+.bigbox { height: 18px; width: 18px }
+
+.box-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.fieldset-content {
+    padding-left: 15px;
+    padding-bottom: 10px;
+}
+
+.faset-cap {
+    font-weight: bold;
+    font-size: 14pt;
+    background: /*#DEB887*/#EEC8A7;
+    width: calc(100%-20px);
+    margin-bottom: 10px;
+    line-height: 30pt;
+    padding-left: 20px;
+    font-family: "Cuprum", sans-serif;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+    color: #8B4513;
+}
+
+label {
+    padding-left: 5px;
+}
+
+.faq {
+    margin-top: 25px;
+    font-size: 16pt;
+    text-align: left;
+    font-style: italic;
+    line-height: 30pt;
+    text-decoration: underline green;
+    margin-left: 240px;
+}
+
+div.faq > ul {
+    list-style-type: disc;
+}
